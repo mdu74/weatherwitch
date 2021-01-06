@@ -41,6 +41,9 @@ namespace WeatherWitch.Services
 
     public User GetByEmail(string Email)
     {
+      var fo = "Hello";
+      var name = fo.ToUpperInvariant();
+
       return _users.FirstOrDefault(x => x.Email == Email);
     }
 

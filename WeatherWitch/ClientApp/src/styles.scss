@@ -1,0 +1,13 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+canvas{
+  width: 800px !important;
+  height: auto !important;
+  margin-left: 10em !important;
+  margin-bottom: 4em !important;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+}

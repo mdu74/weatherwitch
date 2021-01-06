@@ -7,6 +7,7 @@ namespace WeatherWitch.Models
 {
   public class Clouds
   {
-    public int All { get; set; }
+    private int something;
+    public int All;
   }
 }

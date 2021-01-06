@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WeatherWitch.Models;
@@ -10,7 +11,7 @@ namespace WeatherWitch.Controllers
   public class UsersController : ControllerBase
   {
     private IUserService _userService;
-
+    
     public UsersController(IUserService userService)
     {
       _userService = userService ?? throw new ArgumentNullException(nameof(userService));
@@ -18,7 +19,7 @@ namespace WeatherWitch.Controllers
 
     [HttpPost]
     [Route("api/User/LogIn")]
-    public IActionResult Login(AuthRequest userLogin) 
+    public IActionResult Login(AuthRequest userLogin)
     {
       var response = _userService.Authenticate(userLogin);
       if (response == null) return BadRequest(new { message = "Your login information is incorrect"});

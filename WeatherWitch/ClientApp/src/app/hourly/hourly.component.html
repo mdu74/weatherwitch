@@ -1,0 +1,23 @@
+<div class="col-md-3 offset-md-6">
+    <div *ngIf="!hourlyWeatherData" class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<div *ngIf="hourlyWeatherData">
+    <div class="row">
+        <div class="col" style="text-align: center;">
+            <h4>Hourly Weather</h4>
+        </div>
+    </div>
+    <canvas baseChart 
+        [datasets]="hourlyWeatherData"
+        [labels]="hourlyLineChartLabels"
+        [options]="hourlyLineChartOptions"
+        [colors]="hourlyLineChartColors"
+        [legend]="hourlyLineChartLegend"
+        [chartType]="hourlyLineChartType"
+        [plugins]="hourlyLineChartPlugins">
+    </canvas>
+</div>
+
